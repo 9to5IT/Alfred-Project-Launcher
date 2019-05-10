@@ -1,0 +1,35 @@
+{
+  "p1": {
+    "name": "Example-Project",
+    "path": "/Users/user/Documents/Development/example-project",
+    "icon": "icons8/folder-burn.png",
+    "commands": [
+      "/usr/bin/open .",
+      "/usr/local/bin/code .",
+      "/usr/local/bin/iterm",
+      "/Applications/Docker.app/Contents/MacOS/Docker"
+    ]
+  },
+  "p2": {
+    "name": "Example-Web-Project",
+    "path": "/Users/user/Documents/Development/example-web-project",
+    "icon": "icons8/folder-burn.png",
+    "commands": [
+      "/usr/bin/open .",
+      "'/usr/local/bin/code .",
+      "/usr/local/bin/gittower .",
+      "/Applications/CodeKit.app/Contents/MacOS/CodeKit &>/dev/null &",
+      "'/Applications/MAMP PRO.app/Contents/MacOS/MAMP PRO' &>/dev/null &",
+      "'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' http://macos.local:5757"
+    ]
+  },
+  "p3": {
+    "name": "Downloads",
+    "path": "/Users/user/Downloads",
+    "icon": "icons8/folder-burn.png",
+    "commands": [
+      "/usr/bin/open .",
+      "'/Applications/Sublime Text.app/Contents/MacOS/Sublime Text' ."
+    ]
+  }
+}
