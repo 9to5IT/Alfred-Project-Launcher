@@ -102,4 +102,4 @@ This workflow has been tested successfully on Alfred 3 and Alfred 4.
 
 ## Special Mentions
 
-- All icons are from [icons8](https://icons8.com/) except for the Project Launcher icon, which I can't seem to find where I got that from - so thank you to whoever that was
+All icons are from [icons8](https://icons8.com/) except for the Project Launcher icon, which I can't seem to find where I got that from - so thank you to whoever that was
