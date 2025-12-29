@@ -41,6 +41,11 @@
 #   Author:         Luca Sturlese
 #   Creation Date:  06.05.2019
 #   Purpose/Change: Updated documentation
+#
+#   Version:        1.4
+#   Author:         Luca Sturlese
+#   Creation Date:  29.12.2025
+#   Purpose/Change: Changed jq file location from /usr/local/bin to /usr/bin due to new version on MacOS
 
 #---------------------------------------------------------[Initialisations]--------------------------------------------------------
 
@@ -78,7 +83,7 @@ function ListMode {
 
   # Get project name and path from JSON
   resultsString=""
-  results=$( echo $JSONFile | /usr/local/bin/jq -r 'to_entries[] | [.key, .value.name, .value.path, .value.icon] | tostring' )
+  results=$( echo $JSONFile | /usr/bin/jq -r 'to_entries[] | [.key, .value.name, .value.path, .value.icon] | tostring' )
 
   # Store results in a string
   while IFS= read -r i ; do
@@ -174,11 +179,11 @@ function ExecuteMode {
   projectID=$1
 
   # Find project based on specified name
-  project=$( echo $JSONFile | /usr/local/bin/jq -r .$projectID )
+  project=$( echo $JSONFile | /usr/bin/jq -r .$projectID )
 
   # Get project details required to execute commands (i.e. path and commands)
-  projectPath=$( echo $project | /usr/local/bin/jq -r .path )
-  commands=$( echo $project | /usr/local/bin/jq .commands[] )
+  projectPath=$( echo $project | /usr/bin/jq -r .path )
+  commands=$( echo $project | /usr/bin/jq .commands[] )
 
   # --- START COMMAND EXECUTION ---
   cd $projectPath     # change directory to project path in order to execute commands
@@ -196,7 +201,7 @@ function ExecuteMode {
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
 
 # Check pre-reqs are installed on machine
-Check-PreReqs /usr/local/bin/jq
+Check-PreReqs /usr/bin/jq
 
 # Check arguments: No more than 1 argument
 if [ "$#" -gt 1 ]; then
